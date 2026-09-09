@@ -1,0 +1,43 @@
+ACTIVIDAD DE APLICACIÓN: ARQUITECTURA DE SOFTWARE DE AMAZON
+
+1. Descripción de la empresa
+
+Amazon es una empresa de comercio electrónico que permite comprar y vender productos por internet. Para esta actividad, se presenta un modelo simplificado de arquitectura basado en microservicios, sin representar todos los detalles de sus sistemas internos.
+
+2. ¿Cómo se estructura su arquitectura de software?
+
+En una arquitectura de microservicios, las funciones se distribuyen en servicios independientes que se comunican entre sí.
+
+Componente	Función
+Interfaz web y aplicación móvil	Permiten buscar productos, realizar compras y consultar pedidos.
+Puerta de entrada de la API	Recibe las solicitudes y las dirige al servicio correspondiente.
+Servicio de usuarios	Gestiona cuentas, inicio de sesión y datos personales.
+Servicio de catálogo	Administra la información de los productos.
+Servicio de carrito	Guarda los productos que el cliente desea comprar.
+Servicio de pedidos	Registra las compras y controla su estado.
+Servicio de pagos	Procesa los pagos y comunica sus resultados.
+Servicio de inventario	Controla la disponibilidad de los productos.
+Servicio de envíos	Gestiona la entrega y el seguimiento de los pedidos.
+Almacenamiento de datos	Conserva la información que necesita cada servicio.
+
+3. Ejemplo de funcionamiento
+
+Cuando un cliente compra una computadora, consulta el catálogo y agrega el producto al carrito. Al confirmar la compra, el sistema coordina la disponibilidad, el pago y la creación del pedido. Después, gestiona el envío y permite consultar su estado.
+
+4. ¿Por qué utilizar esta arquitectura?
+
+Escalabilidad: permite aumentar los recursos de los servicios que reciben más solicitudes.
+Mantenimiento: facilita actualizar una función de manera independiente.
+Disponibilidad: ayuda a contener fallos, aunque las funciones que dependen de un servicio afectado pueden presentar problemas.
+Trabajo en equipo: distintos equipos pueden desarrollar y mantener diferentes servicios.
+
+5.Escalamiento
+
+La arquitectura utiliza principalmente escalamiento horizontal, que consiste en agregar más servidores o instancias de un microservicio cuando aumenta la cantidad de usuarios o solicitudes.
+
+Por ejemplo, si muchas personas buscan productos al mismo tiempo, se pueden agregar más instancias del servicio de catálogo o búsqueda y distribuir las solicitudes entre ellas.
+
+Esto permite aumentar la capacidad del sistema sin depender de un solo servidor.
+6. Conclusión
+
+Una arquitectura basada en microservicios permite organizar una plataforma de comercio electrónico de gran tamaño y adaptar sus funciones al crecimiento de la demanda. Sin embargo, requiere coordinar los servicios y controlar que la información se mantenga consistente.
